@@ -1,3 +1,9 @@
+% This project is part of the OpenK2 project.
+% Copyright 2015 the authors.
+
+% issues
+% - Catalog name? OK Catalog?  Ketu?
+
 \documentclass[12pt]{article}
 \setlength{\headheight}{0ex}
 \setlength{\headsep}{0ex}
@@ -7,8 +13,45 @@
 \begin{document}
 
 \noindent\textbf{\shortauthor~/~\fulltitle}
+\bigskip
 
-The new \kepler\ \ketu\ Mission is delivering telemetered time-domain
-imaging data from a dozen survey fields to the
+In a breakthrough for exoplanet research and open science, the new
+\kepler\ \ketu\ Mission is delivering telemetered time-domain imaging
+data on tens of thousands of stars in each of a dozen survey fields to
+the public (essentially) as soon as the data have been telemetered
+down by the Spacecraft.
+Here the authors propose to build on this openness by \emph{creating
+  \catalogname}, an exoplanet catalog built from (or updated by)
+every \ketu\ Campagin data set as soon as possible after each Campaign
+data release.
+Importantly, they will also \emph{release the catalog and every
+  update} to the community immediately upon creation, as they did with
+a pilot catalog made from \ketu\ Campaign~1 data.
+The authors will also use \catalogname\ to produce a noise-marginalized,
+completeness-corrected (and geometry-corrected) inference of the true
+distribution of exoplanets, given the \ketu\ and \kepler\ Main Mission
+data.
+
+In it's basic form, \catalogname\ will be built by... simultaneous
+fitting... cleverness... hand vetting... completeness
+evaluation... false-positive modeling.
+
+Over the course of the project, the authors propose to pursue a set of
+enhancements and improvements to the catalog-generation methods and
+software... basis vectors... Gaussian Processes... machine
+vetting... extended noise models...
+All of these improvements will be propagated into annual
+re-processings and re-releases of all the \ketu\ Campaigns released to
+date.
+
+The authors will produce a full, completeness-corrected and
+noise-marginalized inference of the true exoplanet population, using
+\catalogname\ as the fundamental data.
+This inference will proceed by hierarchical probabilistic methods,
+following prior work by the authors...
+
+All software used in this project will be made public under an
+open-source license and maintained in public github repositories in
+contract with a reliable vendor.
 
 \end{document}
