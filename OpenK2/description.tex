@@ -7,12 +7,14 @@
 % ## issues:
 % - [Put issues here or on github].
 
-\documentclass[12pt]{article}
+\documentclass[12pt,preprint]{aastex}
 \setlength{\headheight}{2ex}
 \setlength{\headsep}{3ex}
 \input{hogg_nasa}
 \pagestyle{myheadings}
 \markright{\textsf{\shortauthor~/~\fulltitle}}
+\usepackage{url}
+\usepackage{hyperref}
 
 \begin{document}
 
@@ -28,7 +30,79 @@ How does all this fit into the long-term goals of NASA Origins?
 
 \section{The first Open \ketu\ Catalog}
 
-Hello World!  DFM:  Summary of our paper here, with figures.
+We have made the first steps towards building an open \ketu\ catalog by
+developing a method of transit search that is robust to the large systematic
+effects in the \ketu\ light curves, publishing a list of planet candidates
+from the first Campaign of the \ketu\ Mission, and releasing an open source
+implementation of the method\footnote{\url{https://github.com/dfm/ketu}}
+\citep{Foreman-Mackey:2015}.
+Of the 36 published planet candidates, 18 have since been confirmed as bona
+fide planets \citep{Armstrong:2015, Montet:2015}.
+This transit search procedure was designed to be sensitive to the transits of
+small planets even in the face of the degraded pointing of the \kepler\
+spacecraft by using a data-driven, causal model for the systematic photometric
+variability of the light curves.
+
+
+
+In order to discover transiting planets, exquisite photometric precision is
+crucial.
+Good photometry relies on either a near-perfect flat-field
+and pointing model or else data-analysis techniques that are
+insensitive to these instrument properties.
+The flat-field for \kepler\ was measured on the ground before the launch of
+the spacecraft, but is not nearly as accurate as required to make
+pointing-insensitive photometric measurements at the relevant level of
+precision.
+In principle direct inference of the flat-field might be possible;
+however, because point sources are observed with relatively limited
+spacecraft motion, and only a few percent of the data are actually stored and
+downloaded to Earth, there isn't enough information in the data to derive or
+infer a complete or accurate flat-field map.
+Therefore, work on \KT\ is sensibly focused on building data-analysis
+techniques that are pointing-insensitive.
+
+Previous projects have developed methods to work with \KT\ data.
+Both \citet{Vanderburg:2014} and \citet{Armstrong:2014}
+extract aperture photometry from the pixel data
+and decorrelate with image centroid position, producing light curves for each
+star that are ``corrected'' for the spacecraft motion.
+These data have produced the first confirmed planet found with
+\KT\ \citep{Vanderburg:2015}.
+Both \citet{Aigrain:2015} and \citet{Crossfield:2015} use a Gaussian Process
+model for the measured flux, with pointing measurements as the inputs, and
+then ``de-trend'' using the mean prediction from that model.
+Other data-driven approaches have been developed and applied to the data from
+space missions \citep[for example,][]{Ofir:2010, Stumpe:2012, Smith:2012,
+Petigura:2013, Wang:2015} and ground-based surveys \citep[for
+example,][]{Kovacs:2005, Tamuz:2005, Berta:2012} but they have yet to be
+generalized to \KT.
+
+In all of these light-curve processing methodologies, the authors follow a
+traditional procedure of ``correcting'' or ``de-trending'' the light curve to
+remove systematic and stellar variability as a step that happens \emph{before}
+the search for transiting planets.
+Fit-and-subtract is dangerous:
+Small signals, such as planet transits, can be
+partially absorbed into the best-fit stellar variability or systematics
+models, making each individual transit event appear shallower.
+In other words, the traditional methods are prone to over-fitting.
+Because over-fitting will in general reduce the amplitude of true exoplanet
+signals, small planets that ought to appear just above any specific
+signal-to-noise or depth threshold could be missed because of the de-trending.
+This becomes especially important as the amplitude of the noise increases.
+
+The alternative to this approach is to \emph{simultaneously fit} both the
+systematics and the transit signals.
+Simultaneous fitting can push the detection limits to lower signal-to-noise
+while robustly accounting for uncertainties about the systematic trends.
+In particular, it permits us to \emph{marginalize} over choices in the noise
+model and propagate any uncertainties about the systematic effects
+to our confidence in the detection.
+This marginalization ensures that any conclusions we come to about the
+exoplanet properties are conservative, given the freedom of the systematics
+model.
+
 
 \section{Development and enhancements}
 
@@ -82,5 +156,48 @@ Campaigns, incorporating all enhancements to date.
 
 Everything will be strictly versioned, so that there will be no
 ambiguity about which Catalog is being used where.
+
+\clearpage
+\newcommand{\arxiv}[1]{{\href{http://arxiv.org/abs/#1}{arXiv:{#1}}}}
+\begin{thebibliography}{}\raggedright%
+
+\bibitem[Aigrain \etal(2015)]{Aigrain:2015}
+Aigrain, S., Hodgkin, S.~T., Irwin, M.~J., Lewis, J.~R., \& Roberts, S.~J.\
+2015, \mnras, 447, 2880
+
+\bibitem[Armstrong \etal(2014)]{Armstrong:2014}
+Armstrong, D.~J., Osborn, H.~P., Brown, D.~J.~A., \etal\ 2014,
+\arxiv{1411.6830}
+
+\bibitem[Armstrong \etal(2015)]{Armstrong:2015}
+Armstrong, D.~J., Veras, D., Barros, S.~C.~C., \etal\ 2015, \arxiv{1503.00692}
+
+\bibitem[Crossfield \etal(2015)]{Crossfield:2015}
+Crossfield, I.~J.~M., Petigura, E., Schlieder, J.~E., \etal\ 2015, \apj, 804,
+10
+
+\bibitem[Foreman-Mackey \etal(2015)]{Foreman-Mackey:2015}
+Foreman-Mackey, D., Montet, B.~T., Hogg, D.~W., \etal\ 2015, \arxiv{1502.04715}
+
+\bibitem[Montet \etal(2015)]{Montet:2015}
+Montet, B.~T., Morton, T.~D., Foreman-Mackey, D., \etal\ 2015,
+\arxiv{1503.07866}
+
+\bibitem[Ofir \etal(2010)]{Ofir:2010}
+Ofir, A., Alonso, R., Bonomo, A.~S., \etal\ 2010, \mnras, 404, L99
+
+\bibitem[Smith \etal(2012)]{Smith:2012}
+Smith, J.~C., Stumpe, M.~C., Van Cleve, J.~E., \etal\ 2012, \pasp, 124, 1000
+
+\bibitem[Stumpe \etal(2012)]{Stumpe:2012}
+Stumpe, M.~C., Smith, J.~C., Van Cleve, J.~E., \etal\ 2012, \pasp, 124, 985
+
+\bibitem[Vanderburg \& Johnson(2014)]{Vanderburg:2014}
+Vanderburg, A., \& Johnson, J.~A.\ 2014, \pasp, 126, 948
+
+\bibitem[Vanderburg \etal(2015)]{Vanderburg:2015}
+Vanderburg, A., Montet, B.~T., Johnson, J.~A., et al.\ 2015, \apj, 800, 59
+
+\end{thebibliography}
 
 \end{document}
