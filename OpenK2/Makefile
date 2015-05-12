@@ -17,4 +17,4 @@ vc.tex: ../.git/logs/HEAD
 	( ${CHECK_RERUN} && ${LATEX} $< ) || echo "Done."
 
 clean:
-	${RM} $(foreach suff, ${TMP_SUFFS}, ${NAME}.${suff})
+	${RM} $(foreach suff, ${TMP_SUFFS}, *.${suff})
