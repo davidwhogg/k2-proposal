@@ -47,7 +47,7 @@ For another example, it is focusing on lower-mass stars, which are now
 known to have more abundant planets than Sun-like stars and which
 serve as hosts to planets on shorter-period orbits.
 In the course of its 12 Campaigns---its observations of its 12
-fields---\kt\ data will contain an abundance of exoplanets as
+fields---\kt\ will produce data containing an abundance of exoplanets as
 impressive and important as that from the original \kepler\ Main
 Mission.
 
@@ -57,8 +57,8 @@ patch per star or star cluster every 30~min for 80 to 90~days), but it
 is not delivering lists of detected exoplanets.
 Unlike the \kepler\ Main Mission, the \kt\ deliverables are only raw
 data.
-Here \textbf{we propose to deliver the exoplanet catalog} for \kt,
-along with the information and tools required to use it responsibly
+\textbf{Here we propose to deliver the exoplanet catalog for \kt,
+along with the information and tools required to use it responsibly}
 for statistical studies of exoplanets.
 
 There are also interesting and valuable technical challenges brought
@@ -80,9 +80,62 @@ individual-transit level is high.
 Everything we learn along these lines in working on \kt\ is very
 relevant to the near-future of NASA exoplanet science with \tess.
 
-DWH:  What are we going to learn from \ketu\ that we didn't learn from the Main Mission?  Populations!  Clusters!
+While the \kepler\ Main Mission data provided critical information
+about the population of exoplanets around field G-dwarf (and similar) stars
+in (and near) the Milky Way disk, the \kt\ project will span much more
+territory in host-star space.
+After \kt, we will know about exoplanet populations around other kinds
+of stars (particularly cooler stars), around stars in stellar clusters
+of a range of ages, and around Milky Way halo stars (DFM IS THIS TRUE?).
+It will be critical to understand these populations, and their
+dependencies on stellar type and environment.
+\textbf{Here we propose to perform this populations inference, taking
+  into account Catalog incompleteness and accounting for observational
+  uncertainties.}
+We usually describe this population inference as a determination of the
+rate at which stars host planets, as a function of planet properties
+(period and radius, for example), and conditioned on the stellar type
+(temperature, surface gravity, metallicity, and environment).
 
-DWH:  How does all this fit into the long-term goals of NASA Origins?
+Population inferences to date with \kepler\ Main Mission data (DFM LAUNDRY LIST CITATION) have
+been restricted to G-type stars (and similar) and have varied in
+levels of statistical sophistication.
+We are currently the only group that has fully accounted for
+observational uncertainties (in particular in planet radii) by means
+of a method that is justified probabilistically and is based
+completely on forward modeling noisy data from noiseless samples from
+a true (inferred) distribution (DFM CITE DFM).
+Planet radii are always poorly known (always have significant
+uncertainty), in part because stellar models do not deliver precise
+\emph{stellar radii}, and transit measurements only really constrain
+\emph{relative} sizes of planets and their host stars.
+And (because of the shorter per-star observation duration),
+\kt\ exoplanets will have larger uncertainties than Main-Mission
+planets in all their properties.
+At the present day, we are the best investigators to undertake this
+populations inference.
+(Of course all our code is available open-source on public
+\project{github} repositories, so we are doing our best to put
+ourselves out of business!)
+
+In the long run, NASA's goals include characterization, including by
+direct imaging and spectroscopy, rocky, habitable extra-solar planets.
+This ambitious goal is well served by the \kepler\ and \kt\ Missions.
+Everything we propose here is aligned with this long-term goal:
+We expect \kt\ to deliver dozens to hundreds of habitable-zone
+planets, and our populations work to date has been focused on
+understanding the smallest planets, which we now know to be rocky (DFM
+CITE).
+In addition, and not irrelevant, the openness with which the
+\kepler\ Team has shared its data and results, and the openness built
+into the design of the \kt\ and \tess\ Missions will serve well NASA's
+long-term goals, especially when combined with open-source development
+of the best methods for data analysis and inference by the expert
+community.
+It is our privilege and pleasure to play a role in this ``Comedy of
+the Commons'' in which open data and open-source code have led to an
+acceleration of discovery and knowledge generation aligned with
+important US priorities.
 
 \section{The first Open \ketu\ Catalog}
 
@@ -219,6 +272,11 @@ ambiguity about which Catalog is being used where.
 
 We will work with NYU ITS and also \project{github} to preserve
 the code and its version history in open repositories on the Web.
+
+We will work with NYU ITS and also DWH WHICH NASA EXOPLANET ARCHIVE?
+to publish and preserve the Catalogs we make, along with the
+completeness analyses (and, as noted above (DWH?), all the
+completeness simulation inputs and outputs).
 
 \clearpage
 \newcommand{\arxiv}[1]{{\href{http://arxiv.org/abs/#1}{arXiv:{#1}}}}
