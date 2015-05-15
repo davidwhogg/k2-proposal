@@ -219,25 +219,46 @@ model.
 \paragraph{A data-driven model of photometric systematics}
 
 To model the large systematics in the \ketu\ light curves,
-\citet{Foreman-Mackey:2015}.
+\citet{Foreman-Mackey:2015} developed a data-driven model using the shared
+systematic trends between light curves observed simultaneously with the same
+instrument.
+
+HOGG: how many details do we want here?
 
 
 \section{\thecatalog}
 
-DFM:  Explain how \thecatalog\ is a continuation of what we have done.
+In principle, the methods that we have previously developed
+\citep{Foreman-Mackey:2015} are applicable to each Campaign and it can be used
+to produce a relatively homogeneous and consistent catalog of planets and
+planet candidates across the full baseline of the \kt\ Mission.
+A systematic, automated catalog of planet candidates (with characterized
+completeness and false positive rate) is essential for population inference
+studies: the main strength of the \kt\ dataset.
+The pipeline in its current version can be directly applied to most targets in
+the upcoming Campaigns (except, perhaps, Campaign~9, which is directed towards
+a crowded field in the Galactic bulge) but, as described below, we have
+various suggestions for making the transit search and vetting procedures more
+sensitive and robust.
 
-DFM:  A systematization and pipelining of what we have done in Campaign~1 to
-all other Campaigns.
+We propose to continue developing this transit search pipeline and apply it
+immediately to upcoming \kt\ data releases.
+Processing a Campaign of \kt\ photometry and empirically measuring the search
+completeness currently requires about a week of computation on NYU's High
+Performance Computing resources.
+This should enable a release of planet candidates and the products necessary
+for population inference within about two weeks of the data release.
+We will immediately push our discoveries to \github\ (as part of the Open \kt\
+Initiative\footnote{\url{https://github.com/OpenK2}}) and to the Exoplanet
+Follow-up Observing Program for \kt\
+(\project{ExoFOP-K2}\footnote{\url{https://cfop.ipac.caltech.edu/k2/}})
+repository.
 
-DFM:  Explain what has to be different or customized, given the differences
-between the Campaigns.
+As we continue to improve the search procedures, we will re-analyze the
+previous Campaigns and publish updated candidate lists to the same data hosts.
+Both \github\ and \project{ExoFOP-K2} allow fine-grain versioning and tracking
+of the history of changes.
 
-DFM:  Explain that we will release our catalogs by github and also through
-the willing NASA Archives.
-Give a sense of timescale (weeks after each Campaign release?).
-
-DFM:  We will re-process prior Campaigns as we develop enhancements.
-We will have a revision system for tracking these versions.
 
 \section{Development and enhancements}
 
