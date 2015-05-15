@@ -6,7 +6,7 @@
 
 % ## issues:
 % - DFM:  WE NEED TO SAY SOMETHING SENSIBLE ABOUT EXPECTED YIELDS, here and in summary
-% - 
+% -
 
 \documentclass[12pt,preprint]{aastex}
 \setlength{\headheight}{2ex}
@@ -36,8 +36,8 @@ also done a huge amount to constrain the abundance of Earth-like and
 Now that the \kepler\ Main Mission is over (ended by the failure of a
 second reaction wheel), the Spacecraft is operating in a new mode,
 \kt.
-In this mode, the Spacecraft observes a set of 12 fields around the
-ecliptic plane, each for about 80 days at a time.
+In this mode, the Spacecraft is scheduled to observe a set of at least 12
+fields around the ecliptic plane, each for about 80 days at a time.
 \kt\ is observing for less time on any particular star than in the
 Main Mission, but it is covering a wider range of stars in a wider
 range of environments.
@@ -87,7 +87,7 @@ in (and near) the Milky Way disk, the \kt\ project will span much more
 territory in host-star space.
 After \kt, we will know about exoplanet populations around other kinds
 of stars (particularly cooler stars), around stars in stellar clusters
-of a range of ages, and around Milky Way halo stars (DFM IS THIS TRUE?).
+of a range of ages, and around Milky Way halo stars.
 It will be critical to understand these populations, and their
 dependencies on stellar type and environment.
 \textbf{Here we propose to perform this populations inference, taking
@@ -98,14 +98,16 @@ rate at which stars host planets, as a function of planet properties
 (period and radius, for example), and conditioned on the stellar type
 (temperature, surface gravity, metallicity, and environment).
 
-Population inferences to date with \kepler\ Main Mission data (DFM LAUNDRY LIST CITATION) have
-been restricted to G-type stars (and similar) and have varied in
-levels of statistical sophistication.
+Population inferences to date with \kepler\ Main Mission data
+\citep{Youdin:2011, Howard:2012, Dong:2013, Petigura:2013,
+Foreman-Mackey:2014, Dressing:2015} have
+mostly focused on G-type stars (and similar) and have varied in levels of
+statistical sophistication.
 We are currently the only group that has fully accounted for
 observational uncertainties (in particular in planet radii) by means
 of a method that is justified probabilistically and is based
 completely on forward modeling noisy data from noiseless samples from
-a true (inferred) distribution (DFM CITE DFM).
+a true (inferred) distribution \citep{Foreman-Mackey:2014}.
 Planet radii are always poorly known (always have significant
 uncertainty), in part because stellar models do not deliver precise
 \emph{stellar radii}, and transit measurements only really constrain
@@ -125,8 +127,8 @@ This ambitious goal is well served by the \kepler\ and \kt\ Missions.
 Everything we propose here is aligned with this long-term goal:
 We expect \kt\ to deliver dozens to hundreds of habitable-zone
 planets, and our populations work to date has been focused on
-understanding the smallest planets, which we now know to be rocky (DFM
-CITE).
+understanding the smallest planets, which we now know to be rocky
+\citep{Rogers:2015}.
 In addition, and not irrelevant, the openness with which the
 \kepler\ Team has shared its data and results, and the openness built
 into the design of the \kt\ and \tess\ Missions will serve well NASA's
@@ -146,14 +148,13 @@ effects in the \ketu\ light curves, publishing a list of planet candidates
 from the first Campaign of the \ketu\ Mission, and releasing an open source
 implementation of the method\footnote{\url{https://github.com/dfm/ketu}}
 \citep{Foreman-Mackey:2015}.
-Of the 36 published planet candidates, 18 have since been confirmed as bona
-fide planets \citep{Armstrong:2015, Montet:2015}.
+Of the 36 published planet candidates, 2 were previously known
+\citep{Crossfield:2015} and 16 others have since been confirmed as bona fide
+planets \citep{Armstrong:2015, Montet:2015}.
 This transit search procedure was designed to be sensitive to the transits of
 small planets even in the face of the degraded pointing of the \kepler\
 spacecraft by using a data-driven, causal model for the systematic photometric
 variability of the light curves.
-
-
 
 In order to discover transiting planets, exquisite photometric precision is
 crucial.
@@ -365,11 +366,23 @@ Berta, Z.~K., Irwin, J., Charbonneau, D., Burke, C.~J., \& Falco, E.~E.\ 2012,
 Crossfield, I.~J.~M., Petigura, E., Schlieder, J.~E., \etal\ 2015, \apj, 804,
 10
 
-\bibitem[Foreman-Mackey et al.(2013)]{emcee} Foreman-Mackey, 
-D., Hogg, D.~W., Lang, D., \& Goodman, J.\ 2013, \pasp, 125, 306 
+\bibitem[Dressing \& Charbonneau(2015)]{Dressing:2015}
+Dressing, C.~D., \& Charbonneau, D.\ 2015, \arxiv{1501.01623}
+
+\bibitem[Dong \& Zhu(2013)]{Dong:2013}
+Dong, S., \& Zhu, Z.\ 2013, \apj, 778, 53
+
+\bibitem[Foreman-Mackey \etal(2013)]{emcee} Foreman-Mackey,
+D., Hogg, D.~W., Lang, D., \& Goodman, J.\ 2013, \pasp, 125, 306
+
+\bibitem[Foreman-Mackey \etal(2014)]{Foreman-Mackey:2014}
+Foreman-Mackey, D., Hogg, D.~W., \& Morton, T.~D.\ 2014, \apj, 795, 64
 
 \bibitem[Foreman-Mackey \etal(2015)]{Foreman-Mackey:2015}
 Foreman-Mackey, D., Montet, B.~T., Hogg, D.~W., \etal\ 2015, \arxiv{1502.04715}
+
+\bibitem[Howard \etal(2012)]{Howard:2012}
+Howard, A.~W., Marcy, G.~W., Bryson, S.~T., \etal\ 2012, \apjs, 201, 15
 
 \bibitem[Kov{\'a}cs \etal(2005)]{Kovacs:2005}
 Kov{\'a}cs, G., Bakos, G., \& Noyes, R.~W.\ 2005, \mnras, 356, 557
@@ -384,6 +397,9 @@ Ofir, A., Alonso, R., Bonomo, A.~S., \etal\ 2010, \mnras, 404, L99
 \bibitem[Petigura \etal(2013)]{Petigura:2013}
 Petigura, E.~A., Howard, A.~W., \& Marcy, G.~W.\ 2013,
 Proceedings of the National Academy of Science, 110, 19273
+
+\bibitem[Rogers(2015)]{Rogers:2015}
+Rogers, L.~A.\ 2015, \apj, 801, 41
 
 \bibitem[Smith \etal(2012)]{Smith:2012}
 Smith, J.~C., Stumpe, M.~C., Van Cleve, J.~E., \etal\ 2012, \pasp, 124, 1000
@@ -403,6 +419,9 @@ Vanderburg, A., Montet, B.~T., Johnson, J.~A., \etal\ 2015, \apj, 800, 59
 \bibitem[Wang \etal(2015)]{Wang:2015}
 Wang, D., Foreman-Mackey, D., Hogg, D.~W., \& Sch{\"o}lkopf, B.\ 2015,
 American Astronomical Society Meeting Abstracts, 225, \#258.08
+
+\bibitem[Youdin(2011)]{Youdin:2011}
+Youdin, A.~N.\ 2011, \apj, 742, 38
 
 \end{thebibliography}
 
