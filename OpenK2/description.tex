@@ -219,6 +219,23 @@ To model the large systematics in the \ketu\ light curves,
 \citet{Foreman-Mackey:2015}.
 
 
+\section{\thecatalog}
+
+DFM:  Explain how \thecatalog\ is a continuation of what we have done.
+
+DFM:  A systematization and pipelining of what we have done in Campaign~1 to
+all other Campaigns.
+
+DFM:  Explain what has to be different or customized, given the differences
+between the Campaigns.
+
+DFM:  Explain that we will release our catalogs by github and also through
+the willing NASA Archives.
+Give a sense of timescale (weeks after each Campaign release?).
+
+DFM:  We will re-process prior Campaigns as we develop enhancements.
+We will have a revision system for tracking these versions.
+
 \section{Development and enhancements}
 
 Hello World!  We need a better title for this section
@@ -239,24 +256,68 @@ other shit?
 
 \section{Population inferences}
 
-Hello World!
+DFM:  Hello World!
 
-\section{Prior NASA support}
+DFM:  Populations conditional on stellar type and environment!
 
-Do we need this section?
+DWH:  We must make the point that we will not believe \thecatalog\ is filled
+with correctness if we don't do science with it; populations is the hardest
+part of this.
 
 \section{Culture change in exoplanet science}
 
-This section title is too strident.
+The \kepler\ Mission has had a huge impact on the way science is done,
+in exoplanet science and across astrophysics.
+When the Mission switched to a fully open data release policy, there
+was an immediate and noticeable jump in the number of groups working on
+the data, publications related to \kepler, and citations of \kepler
+publications, results, and data.
+There has been no better evidence for the pragmatic value of open
+science principles than this.
 
-Everything in the group is done out in the open.
-Refer to this proposal's github repo and tag.
+Our collaboration (the PI and Co-I) has had openness at its core from
+the very beginning.
+Our highest-impact joint publication so far is an open-source tool for
+Markov Chain Monte Carlo sampling in probabilistic inference (\citealt{emcee}).
+All of the work we do, all code, all papers, all catalogs, all results
+at all intermediate stages (including the writing of this
+proposal\footnote{available at
+  \url{https://github.com/davidwhogg/k2-proposal}}) is all visible on
+the Web at all times.
+We have found this approach to be very valuable to us; it leads to
+exposure in the community, brings us real-time feedback on our
+activities, creates ideas for collaborations with other scientists,
+and provides tools for other investigations.
+
+This openness also makes us consistent with current ideas and research
+on reproducibility in science:
+Everything we have published can be reproduced with a \package{git~clone}
+operation and a few command-line executions.
+There is a growing sense that this is a necessary part of maintaining
+the provenance, reliability, and specificity of the scientific literature,
+especially now that data analyses are becoming non-trivial.
+
+We see \thecatalog\ as building on and contributing to the openness
+that has worked so well for us and for the exoplanet community.
+An open catalog of exoplanet candidates, released promptly after
+the Campaigns are released, permits rapid follow-up by groups with
+telescope access and theoretical tools, without the requirement that
+each of these groups individually perform its own duplicative searches.
+Furthermore, some of the technical challenges we have solved for
+exoplanet search are non-trivial; it is valuable for the whole community
+to benefit from them.
+As we have emphasized, this openness is not selfless; we expect the
+Catalogs we release to generate abundant citations for our work.
 
 \section{Management plan and data release}
 
-The project is extremely streamlined:
-
+This project is extremely streamlined:
 The postdoctoral scholar will do most of the heavy lifting.
+He or she will run the catalog generation,
+implement the pipeline improvements and enhancements,
+and perform the hierarchical population inferences.
+The postdoc will also be responsible for writing up the key papers
+on searches, Catalogs, and population inferences.
 
 Foreman-Mackey will supervise on all methodological and exoplanetary
 matters.
@@ -283,7 +344,8 @@ completeness simulation inputs and outputs).
 \clearpage
 \newcommand{\arxiv}[1]{{\href{http://arxiv.org/abs/#1}{arXiv:{#1}}}}
 \begin{thebibliography}{}\raggedright%
-
+\setlength{\itemsep}{0ex}%
+\setlength{\parskip}{0ex}%
 \bibitem[Aigrain \etal(2015)]{Aigrain:2015}
 Aigrain, S., Hodgkin, S.~T., Irwin, M.~J., Lewis, J.~R., \& Roberts, S.~J.\
 2015, \mnras, 447, 2880
@@ -302,6 +364,9 @@ Berta, Z.~K., Irwin, J., Charbonneau, D., Burke, C.~J., \& Falco, E.~E.\ 2012,
 \bibitem[Crossfield \etal(2015)]{Crossfield:2015}
 Crossfield, I.~J.~M., Petigura, E., Schlieder, J.~E., \etal\ 2015, \apj, 804,
 10
+
+\bibitem[Foreman-Mackey et al.(2013)]{emcee} Foreman-Mackey, 
+D., Hogg, D.~W., Lang, D., \& Goodman, J.\ 2013, \pasp, 125, 306 
 
 \bibitem[Foreman-Mackey \etal(2015)]{Foreman-Mackey:2015}
 Foreman-Mackey, D., Montet, B.~T., Hogg, D.~W., \etal\ 2015, \arxiv{1502.04715}
